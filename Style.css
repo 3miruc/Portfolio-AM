@@ -18,40 +18,42 @@ body, html {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FAF3E0; /* Fond crème vintage */
-    color: #2D2926; /* Texte noir doux */
+    background-color: #FAF3E0; 
+    color: #2D2926; 
     text-align: center;
-    box-sizing: border-box;
     padding: 20px;
 }
 
-/* Illustration SVG */
+/* Illustration SVG - CENTRAGE PARFAIT */
 .illustration {
-    margin-bottom: 30px; /* Réduit l'espace entre l'illustration et le bouton */
-    margin-top: -200px; /* Monte légèrement l'illustration */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Assurer l'alignement parfait */
+    margin: 0 auto; 
+    padding-bottom: 20px;
 }
 
 .svg-illustration {
-    width: 1200px; /* Largeur de l'illustration */
-    height: auto; /* Maintient les proportions */
-    max-width: 80%; /* Pour assurer une adaptation sur les petits écrans */
+    width: 100%; /* Responsive */
+    max-width: 600px; /* Taille maximale */
+    height: auto; /* Conserver le ratio */
 }
 
-/* Contenu textuel */       
+//* Contenu textuel */       
 #accueil .content {
-    margin-top: -20px; /* Réduit encore l'espace entre le texte et l'illustration */
     text-align: center;
 }
 
 #accueil .content p {
     font-size: 1.2rem;
-    margin-bottom: 10px; /* Ajustement pour réduire l'espace sous le texte */
+    margin-bottom: 10px;
     color: #2D2926;
 }
 
 #accueil .content .button {
     display: inline-block;
-    background-color: #F4CFB6; /* Rose pâle vintage */
+    background-color: #F4CFB6;
     color: #2D2926;
     padding: 10px 20px;
     text-decoration: none;
@@ -62,7 +64,7 @@ body, html {
 }
 
 #accueil .content .button:hover {
-    background-color: #E89E64; /* Orange doux rétro */
+    background-color: #E89E64;
     color: #FAF3E0;
 }
 
@@ -218,31 +220,31 @@ img {
     background-color: #FAF3E0; /* Fond vintage */
 }
 
-/* Galerie */
+/* Galerie - Organisation en 3 colonnes */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes auto-ajustables */
+    gap: 30px; 
     justify-content: center;
-    gap: 30px; /* Espacement uniforme entre les articles */
     margin-top: 30px;
+    padding: 0 20px; /* Éviter que le contenu touche les bords */
 }
 
 /* Conteneur d'article */
 .article-container {
-    width: 30%; /* Pour organiser trois articles par ligne */
-    text-align: center;
-    background-color: #FAF3E0; /* Couleur de fond vintage */
-    border: 3px solid #4C5C68; /* Bordure bleue/grise */
+    background-color: #FAF3E0;
+    border: 3px solid #4C5C68;
     border-radius: 12px;
     padding: 15px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 /* Images */
 .thumbnail {
     width: 100%;
-    height: 220px; /* Hauteur fixe pour uniformiser */
+    height: 200px; /* Uniformisation de la hauteur */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -251,16 +253,15 @@ img {
 
 /* Effet au survol */
 .article-container:hover {
-    transform: scale(1.05); /* Légère animation pour attirer l'attention */
+    transform: scale(1.05);
 }
 
 /* Description de l'article */
 .article-description {
-    text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     color: #2D2926;
-    margin-top: 15px;
+    margin-top: 10px;
     max-width: 100%;
 }
 .titre {
