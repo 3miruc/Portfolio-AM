@@ -1,46 +1,45 @@
 /* Style pour le portfolio BTS SIO - Palette rétro des années 1950 */
 
 body, html {
-    font-family: 'Courier New', Courier, monospace; /* Police rétro typique des années 50 */
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #FAF3E0; /* Fond crème vintage */
-    color: #2D2926; /* Texte noir doux pour un contraste rétro */
+    background-color: #FAF3E0;
+    color: #2D2926;
     height: 100%;
     overflow-x: hidden;
 }
-/* Styles pour la section d'accueil */
-/* Section d'accueil */
-/* Styles pour la section d'accueil */
+
+/* SECTION ACCUEIL */
 #accueil {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FAF3E0; 
-    color: #2D2926; 
+    background-color: #FAF3E0;
+    color: #2D2926;
     text-align: center;
     padding: 20px;
 }
 
-/* Illustration SVG - CENTRAGE PARFAIT */
+/* Illustration SVG - Centrage parfait */
 .illustration {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Assurer l'alignement parfait */
-    margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
     padding-bottom: 20px;
 }
 
 .svg-illustration {
-    width: 100%; /* Responsive */
-    max-width: 600px; /* Taille maximale */
-    height: auto; /* Conserver le ratio */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
 }
 
-//* Contenu textuel */       
+/* Contenu textuel */
 #accueil .content {
     text-align: center;
 }
@@ -213,24 +212,23 @@ img {
     filter: sepia(30%) brightness(1.1); /* Effet rétro accentué sur les images */
     border-radius: 10px;
 }
-/* Section veille */
+/* SECTION VEILLE - Organisation en 3 colonnes */
 #veille {
     text-align: center;
     padding: 40px;
-    background-color: #FAF3E0; /* Fond vintage */
+    background-color: #FAF3E0;
 }
 
-/* Galerie - Organisation en 3 colonnes */
+/* Galerie des articles */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes auto-ajustables */
-    gap: 30px; 
-    justify-content: center;
-    margin-top: 30px;
-    padding: 0 20px; /* Éviter que le contenu touche les bords */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 0 20px;
 }
-
-/* Conteneur d'article */
+/* Conteneur des articles */
 .article-container {
     background-color: #FAF3E0;
     border: 3px solid #4C5C68;
@@ -244,7 +242,7 @@ img {
 /* Images */
 .thumbnail {
     width: 100%;
-    height: 200px; /* Uniformisation de la hauteur */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -263,6 +261,18 @@ img {
     color: #2D2926;
     margin-top: 10px;
     max-width: 100%;
+}
+/* Responsive - Ajustement sur petits écrans */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 .titre {
     font-size: 2rem; /* Assurez-vous que la taille est uniforme */
