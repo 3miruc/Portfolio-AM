@@ -1,3 +1,120 @@
+/* Responsivité - Navbar */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column; /* Alignement en colonne sur petits écrans */
+        padding: 20px 0;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container input, .search-container button {
+        width: 80%; /* Largeur des éléments de recherche */
+        margin-bottom: 10px;
+    }
+}
+
+/* SECTION ACCUEIL */
+#accueil {
+    height: auto;
+    padding: 40px 20px;
+}
+
+.svg-illustration {
+    max-width: 100%;  /* Illustration s'adapte à l'écran */
+}
+
+/* Responsivité pour les colonnes de projets et compétences */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Deux éléments par ligne sur les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* Un élément par ligne sur les écrans mobiles */
+    }
+
+    /* Ajustement de l'espace entre les éléments */
+    .article-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact - Formulaire et carte */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .contact-right form {
+        width: 100%;
+    }
+
+    .map-container iframe {
+        width: 100%; /* Rendre la carte responsive */
+        height: 200px; /* Ajuster la taille de la carte */
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    footer a {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustement des polices sur petits écrans */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Taille réduite de la police */
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .article-description {
+        font-size: 1rem; /* Taille réduite des descriptions */
+    }
+
+    .contact-right input, .contact-right textarea {
+        font-size: 1rem;
+    }
+
+    .contact-right button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .svg-illustration {
+        max-width: 90%; /* Réduit la taille de l'illustration */
+    }
+}
 /* Style pour le portfolio BTS SIO - Palette rétro des années 1950 */
 
 body, html {
