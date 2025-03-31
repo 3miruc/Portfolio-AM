@@ -31,7 +31,7 @@ Ce site web est mon portfolio en ligne, où je présente mes projets réalisés 
 
 ## Remerciements
 
-Je remercie toutes les ressources et personnes qui m'ont aidé à réaliser ce portfolio : tutoriels en ligne, livres, professeurs, et collègues. Merci aussi à GitHub pour l'hébergement de mes projets.
+Je remercie toutes les ressources et personnes qui m'ont aidé à réaliser ce portfolio : tutoriels en ligne, professeurs, collègues, ainsi que ChatGPT pour son assistance dans le développement et l'amélioration de certaines fonctionnalités. Merci aussi à GitHub pour l'hébergement de mes projets.
 
 ## Contact
 
