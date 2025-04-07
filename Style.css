@@ -6,10 +6,22 @@
         padding: 20px 0;
     }
 
-    nav a {
-        margin: 10px 0;
-        font-size: 1.1rem;
-    }
+    /* Fixer la navigation en haut de la page */
+nav {
+    position: fixed;   /* Fixe la barre de navigation */
+    top: 0;            /* Positionne la barre tout en haut de la page */
+    left: 0;           /* Aligne la barre à gauche */
+    width: 100%;       /* Prend toute la largeur */
+    background-color: #4C5C68; /* Couleur de fond de la barre de navigation */
+    z-index: 1000;     /* Assure que la barre de navigation reste au-dessus du contenu */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour la barre */
+}
+
+/* Ajouter un espace en haut du contenu pour éviter que le contenu soit caché sous la barre fixe */
+body {
+    padding-top: 60px;  /* Ajuster la valeur selon la hauteur de votre barre de navigation */
+}
 
     .search-container {
         display: flex;
