@@ -87,22 +87,25 @@ header p {
 }
 
 /* Navigation */
-/* Fixer la navigation en haut de la page */
+/* Fixer la barre de navigation en haut de la page */
+/* Fixer la barre de navigation en haut de la page */
 nav {
     position: fixed;   /* Fixe la barre de navigation */
-    top: 0;            /* Positionne la barre tout en haut de la page */
-    left: 0;           /* Aligne la barre à gauche */
-    width: 100%;       /* Prend toute la largeur */
-    background-color: #4C5C68; /* Bleu gris rétro pour le menu */
+    top: 0;            /* Place la barre tout en haut */
+    left: 0;           /* Aligne à gauche */
+    width: 100%;       /* Prend toute la largeur de la page */
+    background-color: #4C5C68; /* Bleu gris rétro */
     padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour la barre */
-    z-index: 1000;     /* Assure que la barre de navigation reste au-dessus du contenu */
-    text-align: center; /* Centrer le texte */
+    z-index: 999;      /* S'assurer que la barre reste au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une légère ombre pour l'effet rétro */
+    text-align: center; /* Centrer les éléments */
+    top: 0;
+    transition: all 0.3s ease; /* Animation de transition au survol */
 }
 
-/* Espacement pour éviter que le contenu ne soit caché sous la barre de navigation */
+/* Espacement du contenu pour éviter qu'il ne soit caché sous la barre fixe */
 body {
-    padding-top: 60px;  /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
+    margin-top: 60px; /* Compense la hauteur de la barre de navigation fixe */
 }
 
 /* Style des liens de navigation */
@@ -112,10 +115,10 @@ nav a {
     margin: 0 15px;
     font-weight: bold;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-/* Effet de survol pour les liens */
+/* Effet de survol des liens */
 nav a:hover {
     color: #F4CFB6; /* Accent rose pâle rétro au survol */
 }
