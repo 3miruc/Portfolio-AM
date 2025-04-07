@@ -86,36 +86,23 @@ header p {
     margin: 5px 0 0;
 }
 
-/* Fixer la barre de navigation en haut de la page */
+/* Navigation */
 nav {
-    position: sticky;   /* Utilisation de sticky pour rendre la barre fixe uniquement quand elle atteint le haut de la page */
-    top: 0;             /* Place la barre tout en haut */
-    left: 0;            /* Aligne la barre à gauche */
-    width: 100%;        /* Prend toute la largeur de la page */
-    background-color: #4C5C68; /* Bleu gris rétro */
+    display: flex;
+    justify-content: center;
+    background-color: #4C5C68; /* Bleu gris rétro pour le menu */
     padding: 10px 0;
-    z-index: 999;       /* Assure que la barre reste au-dessus des autres éléments */
-    text-align: center; /* Centre les éléments de navigation */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour l'effet rétro */
-    transition: background-color 0.3s ease; /* Animation de transition */
 }
 
-/* Espacement du contenu pour éviter qu'il ne soit caché sous la barre fixe */
-body {
-    margin-top: 60px; /* Compense la hauteur de la barre de navigation sticky */
-}
-
-/* Style des liens de navigation */
 nav a {
     color: #FAF3E0; /* Texte crème vintage */
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
-/* Effet de survol des liens */
 nav a:hover {
     color: #F4CFB6; /* Accent rose pâle rétro au survol */
 }
