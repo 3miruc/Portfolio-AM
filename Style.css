@@ -1,187 +1,57 @@
-/* Responsivité - Navbar */
-@media (max-width: 768px) {
-    /* Navigation */
-    nav {
-        flex-direction: column; /* Alignement en colonne sur petits écrans */
-        padding: 20px 0;
-    }
-
-    /* Fixer la navigation en haut de la page */
-nav {
-    position: fixed;   /* Fixe la barre de navigation */
-    top: 0;            /* Positionne la barre tout en haut de la page */
-    left: 0;           /* Aligne la barre à gauche */
-    width: 100%;       /* Prend toute la largeur */
-    background-color: #4C5C68; /* Couleur de fond de la barre de navigation */
-    z-index: 1000;     /* Assure que la barre de navigation reste au-dessus du contenu */
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour la barre */
-}
-
-/* Ajouter un espace en haut du contenu pour éviter que le contenu soit caché sous la barre fixe */
-body {
-    padding-top: 60px;  /* Ajuster la valeur selon la hauteur de votre barre de navigation */
-}
-
-    .search-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .search-container input, .search-container button {
-        width: 80%; /* Largeur des éléments de recherche */
-        margin-bottom: 10px;
-    }
-}
-
-/* SECTION ACCUEIL */
-#accueil {
-    height: auto;
-    padding: 40px 20px;
-}
-
-.svg-illustration {
-    max-width: 100%;  /* Illustration s'adapte à l'écran */
-}
-
-/* Responsivité pour les colonnes de projets et compétences */
-@media (max-width: 1024px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Deux éléments par ligne sur les écrans moyens */
-    }
-}
-
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(1, 1fr); /* Un élément par ligne sur les écrans mobiles */
-    }
-
-    /* Ajustement de l'espace entre les éléments */
-    .article-container {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Contact - Formulaire et carte */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-left, .contact-right {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .contact-right form {
-        width: 100%;
-    }
-
-    .map-container iframe {
-        width: 100%; /* Rendre la carte responsive */
-        height: 200px; /* Ajuster la taille de la carte */
-    }
-}
-
-/* Footer responsive */
-@media (max-width: 768px) {
-    footer p {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    footer a {
-        font-size: 1rem;
-    }
-}
-
-/* Ajustement des polices sur petits écrans */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem; /* Taille réduite de la police */
-    }
-
-    .button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .article-description {
-        font-size: 1rem; /* Taille réduite des descriptions */
-    }
-
-    .contact-right input, .contact-right textarea {
-        font-size: 1rem;
-    }
-
-    .contact-right button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .svg-illustration {
-        max-width: 90%; /* Réduit la taille de l'illustration */
-    }
-}
 /* Style pour le portfolio BTS SIO - Palette rétro des années 1950 */
 
 body, html {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace; /* Police rétro typique des années 50 */
     margin: 0;
     padding: 0;
-    background-color: #FAF3E0;
-    color: #2D2926;
+    background-color: #FAF3E0; /* Fond crème vintage */
+    color: #2D2926; /* Texte noir doux pour un contraste rétro */
     height: 100%;
     overflow-x: hidden;
 }
-
-/* SECTION ACCUEIL */
+/* Styles pour la section d'accueil */
+/* Section d'accueil */
+/* Styles pour la section d'accueil */
 #accueil {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FAF3E0;
-    color: #2D2926;
+    background-color: #FAF3E0; /* Fond crème vintage */
+    color: #2D2926; /* Texte noir doux */
     text-align: center;
+    box-sizing: border-box;
     padding: 20px;
 }
 
-/* Illustration SVG - Centrage parfait */
+/* Illustration SVG */
 .illustration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 20px;
+    margin-bottom: 30px; /* Réduit l'espace entre l'illustration et le bouton */
+    margin-top: -200px; /* Monte légèrement l'illustration */
 }
 
 .svg-illustration {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+    width: 1200px; /* Largeur de l'illustration */
+    height: auto; /* Maintient les proportions */
+    max-width: 80%; /* Pour assurer une adaptation sur les petits écrans */
 }
 
-/* Contenu textuel */
+/* Contenu textuel */       
 #accueil .content {
+    margin-top: -20px; /* Réduit encore l'espace entre le texte et l'illustration */
     text-align: center;
 }
 
 #accueil .content p {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Ajustement pour réduire l'espace sous le texte */
     color: #2D2926;
 }
 
 #accueil .content .button {
     display: inline-block;
-    background-color: #F4CFB6;
+    background-color: #F4CFB6; /* Rose pâle vintage */
     color: #2D2926;
     padding: 10px 20px;
     text-decoration: none;
@@ -192,7 +62,7 @@ body, html {
 }
 
 #accueil .content .button:hover {
-    background-color: #E89E64;
+    background-color: #E89E64; /* Orange doux rétro */
     color: #FAF3E0;
 }
 
@@ -341,37 +211,38 @@ img {
     filter: sepia(30%) brightness(1.1); /* Effet rétro accentué sur les images */
     border-radius: 10px;
 }
-/* SECTION VEILLE - Organisation en 3 colonnes */
+/* Section veille */
 #veille {
     text-align: center;
     padding: 40px;
-    background-color: #FAF3E0;
+    background-color: #FAF3E0; /* Fond vintage */
 }
 
-/* Galerie des articles */
+/* Galerie */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 90%;
-    margin: 30px auto;
-    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espacement uniforme entre les articles */
+    margin-top: 30px;
 }
-/* Conteneur des articles */
+
+/* Conteneur d'article */
 .article-container {
-    background-color: #FAF3E0;
-    border: 3px solid #4C5C68;
+    width: 30%; /* Pour organiser trois articles par ligne */
+    text-align: center;
+    background-color: #FAF3E0; /* Couleur de fond vintage */
+    border: 3px solid #4C5C68; /* Bordure bleue/grise */
     border-radius: 12px;
     padding: 15px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    text-align: center;
 }
 
 /* Images */
 .thumbnail {
     width: 100%;
-    height: 200px;
+    height: 220px; /* Hauteur fixe pour uniformiser */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -380,28 +251,17 @@ img {
 
 /* Effet au survol */
 .article-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Légère animation pour attirer l'attention */
 }
 
 /* Description de l'article */
 .article-description {
+    text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     color: #2D2926;
-    margin-top: 10px;
+    margin-top: 15px;
     max-width: 100%;
-}
-/* Responsive - Ajustement sur petits écrans */
-@media (max-width: 1024px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 .titre {
     font-size: 2rem; /* Assurez-vous que la taille est uniforme */
@@ -412,79 +272,19 @@ img {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    gap: 20px;
+/* Fixer la navigation en haut de la page */
+nav {
+    position: fixed;   /* Fixe la barre de navigation */
+    top: 0;            /* Positionne la barre tout en haut de la page */
+    left: 0;           /* Aligne la barre à gauche */
+    width: 100%;       /* Prend toute la largeur */
+    background-color: #4C5C68; /* Couleur de fond de la barre de navigation */
+    z-index: 1000;     /* Assure que la barre de navigation reste au-dessus du contenu */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour la barre */
 }
 
-.contact-left, .contact-right {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-    background-color: #FAF3E0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-left h3, .contact-right h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.contact-left p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-}
-
-.contact-left a {
-    text-decoration: none;
-    color: #2D2926;
-    font-weight: bold;
-}
-
-.contact-left a:hover {
-    color: #0077B5;
-}
-
-.map-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.contact-right form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-right input, .contact-right textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #4C5C68;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-right button {
-    margin-top: 10px;
-    background-color: #F4CFB6;
-    color: #2D2926;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-right button:hover {
-    background-color: #E89E64;
+/* Ajouter un espace en haut du contenu pour éviter que le contenu soit caché sous la barre fixe */
+body {
+    padding-top: 60px;  /* Ajuster la valeur selon la hauteur de votre barre de navigation */
 }
