@@ -1,24 +1,36 @@
-/* Style pour le portfolio BTS SIO - Palette rétro des années 1950 */
+/* ==========================================================================
+
+   PORTFOLIO BTS SIO - Palette rétro des années 1950 
+   Style Original avec Boutons "Solid Shadow" Modernisés
+
+   ========================================================================== */
+
+:root {
+    --bg-creme: #FAF3E0;
+    --noir-retro: #2D2926;
+    --bleu-gris: #4C5C68;
+    --rose-retro: #F4CFB6;
+    --orange-retro: #E89E64;
+}
 
 body, html {
-    font-family: 'Courier New', Courier, monospace; /* Police rétro typique des années 50 */
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #FAF3E0; /* Fond crème vintage */
-    color: #2D2926; /* Texte noir doux pour un contraste rétro */
+    background-color: var(--bg-creme);
+    color: var(--noir-retro);
     height: 100%;
     overflow-x: hidden;
 }
 
-/* Styles pour la section d'accueil */
+/* --- Accueil --- */
 #accueil {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FAF3E0; /* Fond crème vintage */
-    color: #2D2926; /* Texte noir doux */
+    background-color: var(--bg-creme);
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
@@ -35,38 +47,15 @@ body, html {
     height: auto;
 }
 
-/* Contenu textuel */       
-#accueil .content {
-    margin-top: -20px;
-}
-
 #accueil .content p {
     font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #2D2926;
+    margin-bottom: 20px;
 }
 
-#accueil .content .button {
-    display: inline-block;
-    background-color: #F4CFB6; /* Rose pâle vintage */
-    color: #2D2926;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-#accueil .content .button:hover {
-    background-color: #E89E64; /* Orange doux rétro */
-    color: #FAF3E0;
-}
-
-/* Header */
+/* --- Header & Nav --- */
 header {
-    background-color: #2D2926;
-    color: #F4CFB6;
+    background-color: var(--noir-retro);
+    color: var(--rose-retro);
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -78,24 +67,18 @@ header h1 {
     font-weight: bold;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin: 5px 0 0;
-}
-
-/* Navigation */
 nav {
     position: sticky;
     top: 0;
     display: flex;
     justify-content: center;
-    background-color: #4C5C68;
+    background-color: var(--bleu-gris);
     padding: 10px 0;
     z-index: 999;
 }
 
 nav a {
-    color: #FAF3E0;
+    color: var(--bg-creme);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -103,16 +86,14 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #F4CFB6;
-}
+nav a:hover { color: var(--rose-retro); }
 
-/* Sections */
+/* --- Sections --- */
 section {
     padding: 30px;
     margin: 20px;
-    background-color: #FAF3E0;
-    border: 2px solid #4C5C68;
+    background-color: var(--bg-creme);
+    border: 2px solid var(--bleu-gris);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
@@ -120,104 +101,75 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #4C5C68;
-    border-bottom: 2px solid #F4CFB6;
+    color: var(--bleu-gris);
+    border-bottom: 2px solid var(--rose-retro);
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* Boutons */
-.button {
+/* ==========================================================================
+
+   BOUTONS "SOLID SHADOW" - FUSIONNÉS
+
+   ========================================================================== */
+
+.button,
+form button,
+.contact-right button,
+#accueil .content .button {
     display: inline-block;
-    background-color: #F4CFB6;
-    color: #2D2926;
-    padding: 10px 20px;
-    margin-top: 10px;
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: var(--rose-retro);
+    color: var(--noir-retro);
+    padding: 12px 25px;
+    font-size: 1.1rem;
     font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #E89E64;
-}
-
-/* Footer */
-footer {
-    background-color: #2D2926;
-    color: #FAF3E0;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #F4CFB6;
-}
-
-footer a {
-    color: #F4CFB6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    border: 2px solid var(--noir-retro);
+    box-shadow: 4px 4px 0px var(--noir-retro);
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #E89E64;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Formulaires */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form input, form textarea, form button {
-    font-size: 1rem;
-    padding: 10px;
-    border: 1px solid #4C5C68;
-    border-radius: 5px;
-    background-color: #FAF3E0;
-    color: #2D2926;
-    transition: border 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #F4CFB6;
-    outline: none;
-}
-
-form button {
-    background-color: #F4CFB6;
-    color: #2D2926;
-    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.2s ease;
+    margin-top: 10px;
 }
 
-form button:hover {
-    background-color: #E89E64;
+/* Hover */
+.button:hover,
+form button:hover,
+.contact-right button:hover,
+#accueil .content .button:hover {
+    transform: translate(-2px, -2px);
+    background-color: var(--orange-retro);
+    color: white;
+    box-shadow: 7px 7px 0px var(--noir-retro);
 }
 
-/* Images */
-.responsive {
-    max-width: 100%;
-    height: auto;
+/* Active */
+.button:active,
+form button:active,
+.contact-right button:active,
+#accueil .content .button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--noir-retro);
 }
 
-img {
-    filter: sepia(30%) brightness(1.1);
-    border-radius: 10px;
+/* Focus clavier (accessibilité) */
+.button:focus-visible,
+form button:focus-visible,
+.contact-right button:focus-visible,
+#accueil .content .button:focus-visible {
+    outline: 3px solid var(--orange-retro);
+    outline-offset: 3px;
 }
+
+/* --- Images --- */
+.responsive { max-width: 100%; height: auto; }
+
+img { filter: sepia(30%) brightness(1.1); border-radius: 10px; }
 
 /* Section veille */
-#veille {
-    text-align: center;
-    padding: 40px;
-    background-color: #FAF3E0;
-}
+#veille { text-align: center; padding: 40px; background-color: var(--bg-creme); }
 
 /* Galerie */
 .gallery {
@@ -232,15 +184,14 @@ img {
 .article-container {
     width: 30%;
     text-align: center;
-    background-color: #FAF3E0;
-    border: 3px solid #4C5C68;
+    background-color: var(--bg-creme);
+    border: 3px solid var(--bleu-gris);
     border-radius: 12px;
     padding: 15px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Images */
 .thumbnail {
     width: 100%;
     height: 220px;
@@ -250,25 +201,23 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
-.article-container:hover {
-    transform: scale(1.05);
-}
+.article-container:hover { transform: scale(1.05); }
 
 .article-description {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2D2926;
+    color: var(--noir-retro);
     margin-top: 15px;
-    max-width: 100%;
 }
 
+/* Titres */
 .titre {
     font-size: 2rem;
     font-weight: bold;
-    color: #4C5C68;
+    color: var(--bleu-gris);
     text-align: center;
-    border-bottom: 2px solid #F4CFB6;
+    border-bottom: 2px solid var(--rose-retro);
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
