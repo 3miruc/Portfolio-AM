@@ -279,10 +279,6 @@ img { filter: sepia(30%) brightness(1.1); border-radius: 10px; }
     border-radius: 5px;
     font-size: 1rem;
 }
-/* ==========================================================================
-   NAVIGATION - Correction Alignement et Taille du Bouton
-   ========================================================================== */
-
 nav {
     position: sticky;
     top: 0;
