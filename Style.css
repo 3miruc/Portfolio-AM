@@ -279,38 +279,6 @@ img { filter: sepia(30%) brightness(1.1); border-radius: 10px; }
     border-radius: 5px;
     font-size: 1rem;
 }
-/* --- Navigation MARRON PARALLÈLE (Correction bouton trop grand) --- */
-nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: var(--noir-retro);
-    display: flex;
-    justify-content: center; /* Regroupe recherche et liens au centre */
-    align-items: center;     /* Aligne tout le monde sur la même ligne horizontale */
-    gap: 35px;               /* Espace entre le bloc recherche et les rubriques */
-    padding: 10px 20px;
-    z-index: 1000;
-    border-bottom: 2px solid var(--bleu-gris);
-    flex-wrap: nowrap;       /* Interdit le saut de ligne */
-}
-
-/* Groupe des rubriques (Accueil, À propos...) */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-nav a {
-    color: var(--rose-retro);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    white-space: nowrap; /* Empêche le texte de se couper */
-}
-
-/* --- Formulaire de Recherche (Compact et Parallèle) --- */
 nav form {
     display: flex;
     align-items: center;
