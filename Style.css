@@ -279,23 +279,77 @@ img { filter: sepia(30%) brightness(1.1); border-radius: 10px; }
     border-radius: 5px;
     font-size: 1rem;
 }
-/* --- Barre de Navigation Centrée et Compacte --- */
+/* --- Navigation MARRON PARALLÈLE (Correction bouton trop grand) --- */
 nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--bleu-gris);
+    background-color: var(--noir-retro);
     display: flex;
-    justify-content: center; /* Rapproche tout le monde au centre */
-    align-items: center;     /* Alignement vertical parfait */
-    gap: 30px;               /* Espace global entre le bloc recherche et les liens */
+    justify-content: center; /* Regroupe recherche et liens au centre */
+    align-items: center;     /* Aligne tout le monde sur la même ligne horizontale */
+    gap: 35px;               /* Espace entre le bloc recherche et les rubriques */
     padding: 10px 20px;
     z-index: 1000;
-    box-sizing: border-box;
-    height: auto;            /* Laisse la barre s'adapter au contenu */
-    min-height: 60px;
+    border-bottom: 2px solid var(--bleu-gris);
+    flex-wrap: nowrap;       /* Interdit le saut de ligne */
 }
-/* --- Footer Marron (Identique au Header) --- */
+
+/* Groupe des rubriques (Accueil, À propos...) */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--rose-retro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap; /* Empêche le texte de se couper */
+}
+
+/* --- Formulaire de Recherche (Compact et Parallèle) --- */
+nav form {
+    display: flex;
+    align-items: center;
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+nav input[type="text"] {
+    height: 32px;      /* Hauteur fixe contrôlée */
+    width: 140px;      /* Largeur limitée pour gagner de la place */
+    padding: 0 10px;
+    border: 2px solid var(--bleu-gris);
+    border-radius: 4px 0 0 4px; /* Arrondi à gauche seulement */
+    font-family: inherit;
+    background-color: var(--bg-creme);
+    margin: 0;
+}
+
+/* Bouton spécifique pour la NAV (écrase le style général trop grand) */
+nav button {
+    height: 32px;      /* EXACTEMENT la même hauteur que l'input */
+    margin: 0 !important;      /* Supprime le margin-top qui décalait tout */
+    padding: 0 12px !important;
+    font-size: 0.8rem !important;
+    border-radius: 0 4px 4px 0 !important; /* Arrondi à droite seulement */
+    background-color: var(--rose-retro);
+    color: var(--noir-retro);
+    border: 2px solid var(--noir-retro);
+    box-shadow: 2px 2px 0px var(--noir-retro) !important; /* Ombre réduite pour la nav */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background-color: var(--orange-retro);
+    color: white;
+}
 footer {
     background-color: var(--noir-retro); /* Le marron foncé */
     color: var(--rose-retro);           /* Le beige/rose clair pour le texte */
