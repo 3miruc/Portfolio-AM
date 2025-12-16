@@ -295,7 +295,6 @@ nav {
     height: auto;            /* Laisse la barre s'adapter au contenu */
     min-height: 60px;
 }
-/* --- Footer Marron (Identique au Header) --- */
 footer {
     background-color: var(--noir-retro); /* Le marron foncé */
     color: var(--rose-retro);           /* Le beige/rose clair pour le texte */
