@@ -1,10 +1,3 @@
-/* ==========================================================================
-
-   PORTFOLIO BTS SIO - Palette rétro des années 1950 
-   Style Original avec Boutons "Solid Shadow" Modernisés
-
-   ========================================================================== */
-
 :root {
     --bg-creme: #FAF3E0;
     --noir-retro: #2D2926;
@@ -278,4 +271,47 @@ img { filter: sepia(30%) brightness(1.1); border-radius: 10px; }
     border: 1px solid var(--bleu-gris);
     border-radius: 5px;
     font-size: 1rem;
+}
+/* --- Barre de Navigation Centrée et Compacte --- */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--bleu-gris);
+    display: flex;
+    justify-content: center; /* Rapproche tout le monde au centre */
+    align-items: center;     /* Alignement vertical parfait */
+    gap: 30px;               /* Espace global entre le bloc recherche et les liens */
+    padding: 10px 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: auto;            /* Laisse la barre s'adapter au contenu */
+    min-height: 60px;
+}
+/* --- Footer Marron (Identique au Header) --- */
+footer {
+    background-color: var(--noir-retro); /* Le marron foncé */
+    color: var(--rose-retro);           /* Le beige/rose clair pour le texte */
+    text-align: center;
+    padding: 30px 0;                    /* Un peu d'espace pour respirer */
+    border-top: 3px solid var(--bleu-gris); /* Rappel de la ligne de la nav */
+    margin-top: 50px;                   /* Espace avec la section précédente */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Si tu as des liens dans le footer */
+footer a {
+    color: var(--rose-retro);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--bg-creme);
 }
